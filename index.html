@@ -10,6 +10,7 @@
 
 	<link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/jquery.fancybox.min.css">
 
 </head>
 
@@ -19,7 +20,7 @@
 			<div class="container fx-ac fx-jb">
 				<a href="/" class="logo">
 					<picture>
-						<source media="(min-width: 880px)" srcset="img/logo.png">
+						<source media="(min-width: 1000px)" srcset="img/logo.png">
 						<img src="img/logo__white.png" alt="logo">
 					</picture>
 				</a>
@@ -30,6 +31,14 @@
 					<a href="#galery" class="nav__link">Галерея</a>
 					<a href="#contact" class="nav__link">Контакты</a>
 					<div class="header-left fx-ac">
+						<div class="fx-ac">
+							<a href="https://wa.me/79235697197" class="header__mess" target="_blank">
+								<img src="img/whatsapp.svg" alt="i" loading="lazy">
+							</a>
+							<a href="https://t.me/annavnedvigke" target="_blank" class="header__mess">
+								<img src="img/tg.png" alt="i" loading="lazy">
+							</a>
+						</div>
 						<a href="tel:+79235697197" class="header__call fx-ac">
 							<img src="img/ic-call.svg" alt="o">+7 923 569 71-97</a>
 
@@ -37,7 +46,7 @@
 							<img src="img/mail__g.svg" alt="i">
 							<span>stillhaus@yandex.ru</span>
 						</a>
-						<a href="#" data-modal="modal" class="btn --outline">ПОСМОТРЕТЬ КВАРТИРУ</a>
+						<a href="#" data-modal="modal" class="btn --outline">ПОСМОТРЕТЬ КВАРТИРУ <br> ОНЛАЙН</a>
 					</div>
 				</div>
 			</div>
@@ -57,7 +66,6 @@
 				просмотр квартиры
 			</button>
 		</div>
-		
 		<img src="img/main.jpg" class="main__bg" alt="m">
 		<div class="pop"><img src="img/pop.png" alt="i"></div>
 		<div class="rel"><img src="img/rel.jpg" alt="i"></div>
@@ -103,16 +111,24 @@
 				<div class="locate-images fx">
 					<div class="locate-slider">
 						<div class="locate-slide">
-							<img src="img/r-1.jpg" alt="l">
+							<a href="img/r-1.jpg" data-fancybox="l-1">
+								<img src="img/r-1.jpg" alt="l">
+							</a>
 						</div>
 						<div class="locate-slide">
-							<img src="img/r-2.jpg" alt="l">
+							<a href="img/r-2.jpg" data-fancybox="l-1">
+								<img src="img/r-2.jpg" alt="l">
+							</a>
 						</div>
 						<div class="locate-slide">
-							<img src="img/r-3.jpg" alt="l">
+							<a href="img/r-3.jpg" data-fancybox="l-1">
+								<img src="img/r-3.jpg" alt="l">
+							</a>
 						</div>
 						<div class="locate-slide">
-							<img src="img/r-4.jpg" alt="l">
+							<a href="img/r-4.jpg" data-fancybox="l-1">
+								<img src="img/r-4.jpg" alt="l">
+							</a>
 						</div>
 					</div>
 					<div class="locate-navbar">
@@ -228,11 +244,31 @@
 			</div>
 		</div>
 		<div class="galery-slider fx">
-			<div class="galery-slide"><img src="img/g-1.jpg" alt="i"></div>
-			<div class="galery-slide"><img src="img/g-2.jpg" alt="i"></div>
-			<div class="galery-slide"><img src="img/g-3.jpg" alt="i"></div>
-			<div class="galery-slide"><img src="img/g-2.jpg" alt="i"></div>
-			<div class="galery-slide"><img src="img/g-3.jpg" alt="i"></div>
+			<div class="galery-slide">
+				<a href="img/g-1.jpg" data-fancybox="g-2">
+					<img src="img/g-1.jpg" alt="i">
+				</a>
+			</div>
+			<div class="galery-slide">
+				<a href="img/g-2.jpg" data-fancybox="g-2">
+					<img src="img/g-2.jpg" alt="i">
+				</a>
+			</div>
+			<div class="galery-slide">
+				<a href="img/g-3.jpg" data-fancybox="g-2">
+					<img src="img/g-3.jpg" alt="i">
+				</a>
+			</div>
+			<div class="galery-slide">
+				<a href="img/g-2.jpg" data-fancybox="g-2">
+					<img src="img/g-2.jpg" alt="i">
+				</a>
+			</div>
+			<div class="galery-slide">
+				<a href="img/g-3.jpg" data-fancybox="g-2">
+					<img src="img/g-3.jpg" alt="i">
+				</a>
+			</div>
 		</div>
 	</section>
 
@@ -287,19 +323,29 @@
 		<h2>ГАЛЛЕРЕЯ</h2>
 		<div class="galery-slider fx">
 			<div class="galery-slide">
-				<img src="img/b-12.jpg" alt="i">
+				<a href="img/b-12.jpg" data-fancybox="g-1">
+					<img src="img/b-12.jpg" alt="i">
+				</a>
 			</div>
 			<div class="galery-slide">
-				<img src="img/g-1.jpg" alt="i">
+				<a href="img/g-1.jpg" data-fancybox="g-1">
+					<img src="img/g-1.jpg" alt="i">
+				</a>
 			</div>
 			<div class="galery-slide">
-				<img src="img/dom-slide-2.jpg" alt="i">
+				<a href="img/dom-slide-2.jpg" data-fancybox="g-1">
+					<img src="img/dom-slide-2.jpg" alt="i">
+				</a>
 			</div>
 			<div class="galery-slide">
-				<img src="img/b-2.jpg" alt="i">
+				<a href="img/b-2.jpg" data-fancybox="g-1">
+					<img src="img/b-2.jpg" alt="i">
+				</a>
 			</div>
 			<div class="galery-slide">
-				<img src="img/dom-slide-3.jpg" alt="i">
+				<a href="img/dom-slide-3.jpg" data-fancybox="g-1">
+					<img src="img/dom-slide-3.jpg" alt="i">
+				</a>
 			</div>
 		</div>
 	</section>
@@ -356,6 +402,7 @@
 	<script src="js/slick.min.js"></script>
 	<script src="js/jquery.inputmask.min.js"></script>
 	<script src="js/script.js"></script>
+	<script src="js/jquery.fancybox.min.js"></script>
 
 </body>
 

@@ -2,7 +2,7 @@
     padding: 22px 10px
     position: relative
     z-index: 9999
-    @media screen and ( min-width:  880px)
+    @media screen and ( min-width:  1000px)
         min-height: 100px
         background: linear-gradient(360deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.7) 70%, rgba(255, 255, 255, 0.9) 100%)
         background-blend-mode: lighten
@@ -10,7 +10,7 @@
     .container
         position: relative
         z-index: 9999
-        max-width: 1180px
+        max-width: 1320px
 
     .nav
         width: 100%
@@ -25,29 +25,40 @@
         img
             display: block
 
-        @media screen and ( min-width:  1100px)
+        @media screen and ( min-width:  1260px)
             position: absolute
-            left: 50%
+            left: 48%
             top: 50%
             transform: translate(-50%, -50%)
 
     &-left
-        gap: 40px
         margin-left: auto
+
+    &__mess 
+        padding: 5px
+        // filter: invert(1)
+        background-color: $prime 
+        border-radius: 6px
+        margin-right: 8px
+        img 
+            width: 25px
+            display: block
 
     &__call
         gap: 6px
+        font-weight: 600
         width: fit-content
+        margin: 0 30px 0 10px
         &.--second
-            @media screen and ( min-width:  880px)
+            @media screen and ( min-width:  1000px)
                 display: none
 
     .btn
         font-size: 16px
         padding: 8px 20px 9px
 
-    @media screen and ( max-width:  1100px)
-        @media screen and ( min-width:  880px)
+    @media screen and ( max-width:  1260px)
+        @media screen and ( min-width:  1000px)
             .btn
                 display: none
 
@@ -57,7 +68,7 @@
             &-left
                 margin-left: 40px
 
-    @media screen and ( max-width:  880px)
+    @media screen and ( max-width:  1000px)
         background-color: $prime
         padding: 15px 0
 
@@ -142,6 +153,8 @@
             color: white
             order: 1
             margin-bottom: 20px
+            br 
+                display: none
 
         .logo
             max-width: 120px
@@ -149,3 +162,5 @@
         &__call
             order: 2
             margin: 0 auto
+            img 
+                max-width: 20px
