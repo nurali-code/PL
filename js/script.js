@@ -27,6 +27,20 @@ $(function () {
     });
 });
 
+$('.main-slider').slick({
+    infinite: true,
+    dots: false,
+    arrows: false,
+    slidesToShow: 1,
+    swipeToSlide: true,
+    centerMode: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    touchThreshold: 9,
+    centerPadding: '0',
+    slidesToScroll: 1,
+});
+
 $('.galery-slider').slick({
     infinite: true,
     dots: false,
@@ -35,6 +49,7 @@ $('.galery-slider').slick({
     swipeToSlide: true,
     centerMode: true,
     slidesToShow: 3,
+    variableWidth: true,
     slidesToScroll: 1,
     touchThreshold: 9,
     centerPadding: '0',

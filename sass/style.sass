@@ -570,6 +570,13 @@
 
 .galery
     text-align: center
+    h2
+        margin-bottom: 32px
+
+    &-slide
+        width: 75vw
+        max-width: 574px
+
     &-slider
         max-width: 1920px
         margin: 0 auto
@@ -580,6 +587,8 @@
             border-radius: 15px
 
         .slick
+            &-slide
+                transition: transform 0.3
             &-track
                 display: flex !important
                 align-items: center
@@ -587,8 +596,16 @@
             &-slide,
             &-slide[aria-hidden="true"]:not(.slick-cloned) ~ .slick-cloned[aria-hidden="true"]
                 transform: scale(0.7, 0.7)
-                transition: transform 0.3s
 
             &-center,
             &-slide[aria-hidden="true"]:not([tabindex="-1"]) + .slick-cloned[aria-hidden="true"]
                 transform: scale(1, 1)
+
+            @media screen and ( max-width: 720px )
+                &-slide,
+                &-slide[aria-hidden="true"]:not(.slick-cloned) ~ .slick-cloned[aria-hidden="true"]
+                    transform: scale(0.8, 0.8)
+
+                &-center,
+                &-slide[aria-hidden="true"]:not([tabindex="-1"]) + .slick-cloned[aria-hidden="true"]
+                    transform: scale(1, 1)

@@ -14,7 +14,7 @@
 </head>
 
 <body>
-	<div class="main fx">
+	<div class="main fx" id="main">
 		<header class="header">
 			<div class="container fx-ac fx-jb">
 				<a href="/" class="logo">
@@ -25,10 +25,10 @@
 				</a>
 				<button class="btn__menu"><span></span></button>
 				<div class="nav fx-ac">
-					<a href="#" class="nav__link">Главная</a>
-					<a href="#" class="nav__link">Планировка</a>
-					<a href="#" class="nav__link">Галерея</a>
-					<a href="#" class="nav__link">Контакты</a>
+					<a href="#main" class="nav__link">Главная</a>
+					<a href="#plan" class="nav__link">Планировка</a>
+					<a href="#galery" class="nav__link">Галерея</a>
+					<a href="#contact" class="nav__link">Контакты</a>
 					<div class="header-left fx-ac">
 						<a href="tel:+79235697197" class="header__call fx-ac">
 							<img src="img/ic-call.svg" alt="o">+7 923 569 71-97</a>
@@ -57,9 +57,17 @@
 				просмотр квартиры
 			</button>
 		</div>
+		
 		<img src="img/main.jpg" class="main__bg" alt="m">
 		<div class="pop"><img src="img/pop.png" alt="i"></div>
 		<div class="rel"><img src="img/rel.jpg" alt="i"></div>
+
+		<!-- <div class="main-slider">
+			<div class="main-slide">
+				<img src="img/main.jpg" alt="m">
+			</div>
+		</div> -->
+
 	</div>
 
 	<section class="locate">
@@ -203,7 +211,7 @@
 		</div>
 	</section>
 
-	<section class="rooms">
+	<section class="rooms" id="plan">
 		<div class="container">
 			<h2>СПАЛЬНЯ И ВАННАЯ КОМНАТА</h2>
 			<div class="rooms-items fx-jb">
@@ -275,28 +283,28 @@
 		</div>
 	</section>
 
-	<section class="galery">
+	<section class="galery" id="galery">
 		<h2>ГАЛЛЕРЕЯ</h2>
 		<div class="galery-slider fx">
 			<div class="galery-slide">
 				<img src="img/b-12.jpg" alt="i">
 			</div>
 			<div class="galery-slide">
+				<img src="img/g-1.jpg" alt="i">
+			</div>
+			<div class="galery-slide">
+				<img src="img/dom-slide-2.jpg" alt="i">
+			</div>
+			<div class="galery-slide">
 				<img src="img/b-2.jpg" alt="i">
 			</div>
 			<div class="galery-slide">
-				<img src="img/b-12.jpg" alt="i">
-			</div>
-			<div class="galery-slide">
-				<img src="img/b-2.jpg" alt="i">
-			</div>
-			<div class="galery-slide">
-				<img src="img/b-3.jpg" alt="i">
+				<img src="img/dom-slide-3.jpg" alt="i">
 			</div>
 		</div>
 	</section>
 
-	<footer class="footer">
+	<footer class="footer" id="contact">
 		<div class="container fx-ac fx-jb">
 			<nav class="nav fx-ac">
 				<a href="#" class="nav__link">
