@@ -2,6 +2,28 @@
 $('.btn__menu').on('click', function () { $('.header .nav, .btn__menu, body').toggleClass('is_active'); })
 $('.nav__link').on('click', function () { $('.header .nav, .btn__menu, body').removeClass('is_active'); })
 
+$('input[name="uphone"]').inputmask({ "mask": "+7-999-999-99-99" });
+
+
+$("form").submit(function () {
+    $('form .btn').attr('disabled', 'disabled');
+    var sender = "../smart.php";
+    $.ajax({
+        type: "POST",
+        method: 'POST',
+        url: sender,
+        data: $(this).serialize(),
+        success: function (response) {
+            console.log(response);
+            $('form .btn').removeAttr('disabled');
+            $('form').trigger('reset');
+            $('.modal').fadeOut();
+            alert('Спасибо, за заявку, ожидайте с вами свяжется специалист');
+        }
+    });
+    return false;
+});
+
 function hideModals() {
     $('.modal').fadeOut();
     $('body').removeClass('active');
