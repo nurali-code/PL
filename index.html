@@ -37,7 +37,7 @@
 							<img src="img/mail__g.svg" alt="i">
 							<span>stillhaus@yandex.ru</span>
 						</a>
-						<a href="tel:+79235697197" class="btn --outline">ПОСМОТРЕТЬ КВАРТИРУ</a>
+						<a href="#" data-modal="modal" class="btn --outline">ПОСМОТРЕТЬ КВАРТИРУ</a>
 					</div>
 				</div>
 			</div>
@@ -52,7 +52,7 @@
 				Квартира <br>
 				<mark>в центре города</mark>
 			</h1>
-			<button class="btn --outline --white">
+			<button class="btn --outline --white" data-modal="modal">
 				Записаться на <br>
 				просмотр квартиры
 			</button>
@@ -241,7 +241,7 @@
 
 	<section class="request">
 		<div class="container">
-			<h2>ОСТАВЬТЕ ЗАЯВКУ И ВЫ ПОЛУЧИТЕ:</h2>
+			<h2>ОСТАВЬТЕ ЗАЯВКУ <i class="nwr">И ВЫ ПОЛУЧИТЕ:</i></h2>
 			<div class="fx-ac fx-jb request-items">
 				<div class="request-item cur fx-ac">
 					ПРЕЗЕНТАЦИЯ С ПЛАНИРОВКОЙ КВАРТИРЫ
@@ -279,13 +279,19 @@
 		<h2>ГАЛЛЕРЕЯ</h2>
 		<div class="galery-slider fx">
 			<div class="galery-slide">
-				<img src="img/dom-slide.jpg" alt="i">
+				<img src="img/b-12.jpg" alt="i">
 			</div>
 			<div class="galery-slide">
-				<img src="img/dom-slide.jpg" alt="i">
+				<img src="img/b-2.jpg" alt="i">
 			</div>
 			<div class="galery-slide">
-				<img src="img/dom-slide.jpg" alt="i">
+				<img src="img/b-12.jpg" alt="i">
+			</div>
+			<div class="galery-slide">
+				<img src="img/b-2.jpg" alt="i">
+			</div>
+			<div class="galery-slide">
+				<img src="img/b-3.jpg" alt="i">
 			</div>
 		</div>
 	</section>
@@ -294,12 +300,12 @@
 		<div class="container fx-ac fx-jb">
 			<nav class="nav fx-ac">
 				<a href="#" class="nav__link">
-					<img src="img/vk.png" alt="i" loading="lazy">
+					<img src="img/whatsapp.svg" alt="i" loading="lazy">
 				</a>
 				<a href="#" class="nav__link">
 					<img src="img/tg.png" alt="i" loading="lazy">
 				</a>
-				<a href="#" class="nav__link">
+				<a href="#" class="nav__link policy">
 					Политика <br> конфиденциальности
 				</a>
 			</nav>
@@ -318,6 +324,25 @@
 			</div>
 		</div>
 	</footer>
+
+	<div class="modal" id="modal">
+		<div class="modal-content">
+			<button class="modal-close">&times;</button>
+			<h3 class="h2">УКАЖИТЕ ВАШИ ДАННЫЕ</h3>
+			<p>ЧТОБЫ ПОЛУЧИТЬ ПОДРОБНУЮ ПРЕЗЕНТАЦИЮ С ПЛАНИРОВКОЙ В WHATSAPP</p>
+			<form action="#">
+				<div class="f-box fx-ac">
+					<img src="img/f-boock.svg" alt="i">
+					<input type="text" required placeholder="ВАШЕ ИМЯ">
+				</div>
+				<div class="f-box fx-ac">
+					<img src="img/f-call.svg" alt="i">
+					<input type="tel" required placeholder="ВАШ НОМЕР ТЕЛЕФОНА">
+				</div>
+				<button type="submit" class="btn">ОТПРАВИТЬ</button>
+			</form>
+		</div>
+	</div>
 
 	<script src="js/jquery-3.7.1.min.js"></script>
 	<script src="js/slick.min.js"></script>

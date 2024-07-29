@@ -17,12 +17,10 @@ $(function () {
         showModal('#' + $(this).attr("data-modal"));
     });
 
-    $('.modal__close').on('click', () => { hideModals(); });
+    $('.modal-close').on('click', () => { hideModals(); });
     $(document).on('click', function (e) {
         if (!(($(e.target).parents('.modal-content').length) ||
-            ($(e.target).parents('.btn_1').length) ||
             ($(e.target).parents('.btn').length) ||
-            ($(e.target).hasClass('btn_1')) ||
             ($(e.target).hasClass('btn')) ||
             ($(e.target).hasClass('modal-content'))
         )) { hideModals(); }

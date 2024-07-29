@@ -17,6 +17,8 @@ body
     font-optical-sizing: auto
     font-weight: 500
     font-style: normal
+    &.is_active
+        overflow: hidden
 
 .container
     max-width: 1130px
@@ -118,7 +120,7 @@ section,.section
 input
     width: 100%
     background-color: white
-    height: 43px
+    height: 46px
     border-radius: 15px
     padding: 0 16px
     font-size: 12px
@@ -137,6 +139,39 @@ input
     input
         border: none
 
+form
+    .btn
+        font-weight: 400
+        font-size: 20px
+        text-transform: uppercase
+        color: white
+        border-radius: 15px
+        padding: 11px 20px
+
+.nwr
+    font-style: normal
+    white-space: nowrap
+
+.rel
+    max-width: 210px
+    position: absolute
+    bottom: 25px
+    right: 18px
+    background-color: #fff
+    border-radius: 10px
+    overflow: hidden
+    box-shadow: 4.71px 4.71px 9.42px 0px #00000040
+    img
+        display: block
+
 @media screen and ( max-width: 991px )
     .container
         max-width: 730px
+
+    h2,.h2 
+        font-size: 24px
+
+@media screen and ( max-width: 720px )
+    h2,.h2 
+        font-size: 22px
+        margin-bottom: 24px

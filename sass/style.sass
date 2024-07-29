@@ -3,12 +3,13 @@
 @import 'elements'
 @import 'header'
 @import 'slick'
+@import 'modal'
 @import 'footer'
 
 .main
     min-height: 100vh
     position: relative
-    z-index: 1
+    z-index: 11
     color: white
     padding-bottom: 110px
     flex-direction: column
@@ -74,18 +75,6 @@
         img
             display: block
 
-    .rel
-        max-width: 210px
-        position: absolute
-        bottom: 25px
-        right: 18px
-        background-color: #fff
-        border-radius: 10px
-        overflow: hidden
-        box-shadow: 4.71px 4.71px 9.42px 0px #00000040
-        img
-            display: block
-
     @media screen and ( max-width: 991px )
         .rel, .pop
             display: none
@@ -117,6 +106,10 @@
 
 .locate
     padding-top: 48px
+    @media screen and ( min-width: 991px )
+        position: relative
+        z-index: 111
+
     &-pop
         padding: 6px 20px
         border-radius: 15px
@@ -251,8 +244,25 @@
             max-width: 450px
 
     @media screen and ( max-width: 720px )
+        padding-top: 38px
+        h2
+            font-size: 23.39px
+            min-height: 66px
+            padding: 0 20px
+            margin-bottom: 17px
+            &::before
+                width: 66px
+                height: 66px
+                margin-top: -33px
+                left: -8px
+
+        .title
+            margin-bottom: 13px
+
         &-items
             gap: 8px
+            justify-content: space-between
+
         &-item
             i
                 font-size: 11.56px
@@ -267,6 +277,8 @@
                 padding: 0
 
         p
+            padding: 0 20px
+            font-size: 14px
             margin-bottom: 24px
 
 .dom
@@ -396,7 +408,18 @@
             width: 100%
             margin-bottom: 10px
 
+    @media screen and ( max-width: 720px )
+        border-radius: 25px
+        padding-bottom: 31px
+        &-item
+            font-size: 12px
+            padding: 15px
+
+        .galery-slider
+            margin-top: 23px
+
 .poper
+    padding: 0 15px
     &-col
 
         background-color: #fff
@@ -438,20 +461,32 @@
             box-shadow: 0px 0px 15px 0px #00000026
             border-radius: 15px
 
+    @media screen and ( max-width: 720px )
+        &-col
+            padding: 0
+
+        &__btn
+            font-size: 16.17px
+
 .request
     h2
         text-align: center
         margin-bottom: 42px
 
     &-items
+        justify-content: center
+        gap: 40px
         margin-bottom: 54px
 
     &-item
         min-height: 79px
-        max-width: 27%
+        max-width: 31%
+        font-size: 18px
+        padding-left: 32px
         &::before
             width: 79px
             height: 79px
+            left: 0
             margin-top: -39px
 
     &-box
@@ -465,31 +500,73 @@
         padding: 40px 10px 40px 60px
         max-width: 510px
         background-color: #fff
+        position: relative
+        z-index: 11
         box-shadow: 20px 0px 64px 55px #fff
 
     .h2
-        margin-bottom: 24px
+        margin-bottom: 22px
 
     p
         font-size: 15px
         margin: 0 0 24px
 
-    .btn
-        font-weight: 400
-        font-size: 20px
-        text-transform: uppercase
-        color: white
-        border-radius: 15px
-        padding: 11px 20px
-
     &__bg
-        position: absolute
-        top: 0
-        right: 0
-        width: 60%
-        height: 100%
-        z-index: -1
         object-fit: cover
+        display: block
+        z-index: -1
+        @media screen and ( min-width:  992px)
+            position: absolute
+            top: 0
+            right: 0
+            width: 60%
+            height: 100%
+
+    @media screen and ( max-width:  992px)
+        &-items
+            flex-wrap: wrap
+        &-item
+            width: 47%
+            max-width: unset
+
+        .col
+            max-width: 100%
+            padding: 20px 30px 30px
+            box-shadow: 0px 20px 64px 55px #fff
+
+        &-box
+
+        &__bg
+
+    @media screen and ( max-width:  720px)
+        h2
+            margin-bottom: 21px
+
+        &-items
+            gap: 15px 2%
+            margin-bottom: 20px
+
+        &-item
+            min-height: 54px
+            font-size: 14px
+            line-height: 125%
+            padding-left: 16px
+            width: fit-content
+            margin-right: auto
+            &::before
+                height: 54px
+                width: 54px
+                margin-top: -27px
+            &:last-child
+                width: fit-content
+
+        &-box
+            .h2
+                font-size: 20px
+                margin-bottom: 10px
+            p
+                font-size: 12px
+                margin-bottom: 15px
 
 .galery
     text-align: center
@@ -498,14 +575,20 @@
         margin: 0 auto
 
         img
+            margin: 0 auto
             display: block
             border-radius: 15px
 
-        .slick-slide,
-        .slick-slide[aria-hidden="true"]:not(.slick-cloned) ~ .slick-cloned[aria-hidden="true"]
-            transform: scale(0.7, 0.7)
-            transition: transform 0.3s
+        .slick
+            &-track
+                display: flex !important
+                align-items: center
 
-        .slick-center,
-        .slick-slide[aria-hidden="true"]:not([tabindex="-1"]) + .slick-cloned[aria-hidden="true"]
-            transform: scale(1, 1)
+            &-slide,
+            &-slide[aria-hidden="true"]:not(.slick-cloned) ~ .slick-cloned[aria-hidden="true"]
+                transform: scale(0.7, 0.7)
+                transition: transform 0.3s
+
+            &-center,
+            &-slide[aria-hidden="true"]:not([tabindex="-1"]) + .slick-cloned[aria-hidden="true"]
+                transform: scale(1, 1)
