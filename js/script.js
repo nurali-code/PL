@@ -44,6 +44,7 @@ $(function () {
         if (!(($(e.target).parents('.modal-content').length) ||
             ($(e.target).parents('.btn').length) ||
             ($(e.target).hasClass('btn')) ||
+            ($(e.target).hasClass('rel')) ||
             ($(e.target).hasClass('modal-content'))
         )) { hideModals(); }
     });
