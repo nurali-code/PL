@@ -24,7 +24,7 @@
         color: $black
         text-align: left
         border-radius: 24px
-        padding: 35px 58px 
+        padding: 40px 50px
         -ms-overflow-style: none
         scrollbar-width: none
         &::-webkit-scrollbar
@@ -32,12 +32,11 @@
             width: 0
             height: 0
 
-    
-        .h2 
+        .h2
             font-size: 30px
             margin: 0 0 12px
 
-        p 
+        p
             font-size: 15px
             line-height: 130%
             margin: 0 0 15px
@@ -50,17 +49,41 @@
         font-size: 40px
         line-height: 120%
         color: $black
+        z-index: 999
         width: 36px
-
-    
-    @media screen and ( max-width: 1170px )
-        &-content
 
     @media screen and ( max-width: 720px )
         &-content
             padding: 30px 28px
-            .h2 
+            .h2
                 font-size: 24px
 
-            p 
+            p
                 font-size: 13px
+
+#modal_2
+    .modal
+        &-content
+
+        &-close
+            top: 5px
+
+        &__img
+            display: block
+            width: calc( 100% + 80px )
+            max-width: unset
+            position: relative
+            left: -40px
+            margin: 0px 0 30px
+
+        @media screen and ( max-width: 720px )
+            &-content
+                padding-top: 20px
+
+            &-close
+                top: 0
+
+            &__img
+                width: calc( 100% + 56px )
+                left: -28px
+                margin-bottom: 10px
