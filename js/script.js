@@ -2,7 +2,8 @@
 $('.btn__menu').on('click', function () { $('.header .nav, .btn__menu, body').toggleClass('is_active'); })
 $('.nav__link').on('click', function () { $('.header .nav, .btn__menu, body').removeClass('is_active'); })
 
-setInterval(() => { $('#modal_2').fadeIn() }, 10000);
+setTimeout(() => { $('#modal_2').fadeIn() }, 10000);
+
 $('input[name="uphone"]').inputmask({ "mask": "+7-999-999-99-99" });
 
 
