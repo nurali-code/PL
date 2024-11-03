@@ -34,13 +34,13 @@
     &-left
         margin-left: auto
 
-    &__mess 
+    &__mess
         padding: 5px
         // filter: invert(1)
-        background-color: $prime 
+        background-color: $prime
         border-radius: 6px
         margin-right: 8px
-        img 
+        img
             width: 25px
             display: block
 
@@ -52,6 +52,10 @@
         &.--second
             @media screen and ( min-width:  1000px)
                 display: none
+
+    &__tel
+        @media screen and ( min-width:  1000px)
+            display: none
 
     .btn
         font-size: 16px
@@ -100,6 +104,7 @@
                 transform: translateY(0)
 
         .btn__menu
+            order: 3
             width: 35px
             height: 35px
             display: inline-block
@@ -142,6 +147,12 @@
                         top: 0
                         transform: rotate(-45deg)
 
+        &__tel
+            margin: 0 !important
+            color: white
+            img 
+                filter: brightness(5)
+
         &-left
             gap: 14px
             flex-direction: column
@@ -154,7 +165,7 @@
             color: white
             order: 1
             margin-bottom: 20px
-            br 
+            br
                 display: none
 
         .logo
@@ -163,5 +174,5 @@
         &__call
             order: 2
             margin: 0 auto
-            img 
+            img
                 max-width: 20px
